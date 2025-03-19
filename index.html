@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Red de Consultorios Médicos</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #6A0DAD;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            background: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, textarea, button {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #6A0DAD;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #6A0DAD;
+            color: white;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido a la Red de Consultorios Médicos Edumedic</h1>
+        <nav>
+            <ul>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#consultorios">Consultorios</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <section id="servicios">
+        <h2>Nuestros Servicios</h2>
+        <p>Ofrecemos atención médica en diversas especialidades, incluyendo pediatría, cardiología, dermatología y más.</p>
+    </section>
+    
+    <section id="consultorios">
+        <h2>Consultorios en el País</h2>
+        <ul>
+            <li>Quito - Clínica Vida</li>
+            <li>Guayaquil - Centro Médico Salud Total</li>
+            <li>Cuenca - Hospital del Sur</li>
+        </ul>
+        <h3>Ubicación en el mapa</h3>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15955.699994878244!2d-78.5249493!3d-0.180653!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMDDCsDA5JzIxLjEiUyA3OMKwMzEnMjQuMiJX!5e0!3m2!1ses-419!2sec!4v1649580935294!5m2!1ses-419!2sec" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+    
+    <section id="contacto">
+        <h2>Contacto</h2>
+        <p>Puedes comunicarte con nosotros a través del siguiente formulario:</p>
+        <form action="https://formsubmit.co/gabyjayayanez2312@gmail.com" method="POST">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="email">Correo Electrónico:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            
+            <button type="submit">Enviar</button>
+        </form>
+        <h3>También puedes visitarnos en nuestras oficinas:</h3>
+        <p>Dirección: Av. Principal 123, Quito, Ecuador</p>
+        <p>Teléfono: +593 2 123 4567</p>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Red de Consultorios Médicos - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
