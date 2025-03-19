@@ -1,2 +1,0 @@
-# Tecnico
-Red de Consultorios 
