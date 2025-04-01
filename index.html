@@ -240,63 +240,95 @@
                 padding: 12px 25px;
             }
         }
+
     </style>
 </head>
 <body>
 
+    <!-- Header -->
     <header>
         <img src="https://i.postimg.cc/zGkTZzB8/logo-png.jpg" alt="Logo ASO" class="logo">
         <h1>Bienvenidos a la red de Consultorios ASO</h1>
     </header>
 
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Consultorios de Obstetricia</h2>
+        <p>Servicio Profesional en Todo Ecuador</p>
+    </section>
+
+    <!-- Historia de la Asociación -->
     <section class="history-section">
-    <h2>Historia de la Asociación</h2>
-    <p>La Red de Consultorios ASO comenzó como una iniciativa para mejorar la atención obstétrica en Ecuador. Desde sus inicios, hemos trabajado incansablemente para ofrecer los mejores servicios médicos y educación a nuestros profesionales de salud.</p>
-</section>
+        <h2>Historia de la Asociación</h2>
+        <p>La Red de Consultorios ASO comenzó como una iniciativa para mejorar la atención obstétrica en Ecuador. Desde sus inicios, hemos trabajado incansablemente para ofrecer los mejores servicios médicos y educación a nuestros profesionales de salud.</p>
+    </section>
 
-   <section class="about-us-section">
-    <h2>Quiénes Somos</h2>
-    <p>Somos una red de profesionales dedicados a brindar atención integral a mujeres durante el embarazo, parto y postparto. Nos apoyamos en un equipo altamente capacitado y en constante actualización.</p>
-</section>
+    <!-- Quiénes Somos -->
+    <section class="about-us-section">
+        <h2>Quiénes Somos</h2>
+        <p>Somos una red de profesionales dedicados a brindar atención integral a mujeres durante el embarazo, parto y postparto. Nos apoyamos en un equipo altamente capacitado y en constante actualización.</p>
+    </section>
 
+    <!-- Red de Consultorios -->
     <section class="consulting-network-section">
-    <h2>Red de Consultorios</h2>
-    <p>Contamos con una extensa red de consultorios en todo el país para brindarte atención profesional donde más lo necesites.</p>
-    <a href="http://enlace-a-los-consultorios.com" target="_blank" class="btn-consulting">Ver Consultorios</a>
-</section>
+        <h2>Red de Consultorios</h2>
+        <p>Contamos con una extensa red de consultorios en todo el país para brindarte atención profesional donde más lo necesites.</p>
+        <a href="http://enlace-a-los-consultorios.com" target="_blank" class="btn-consulting">Ver Consultorios</a>
+    </section>
 
+    <!-- Insumos Médicos -->
     <section class="medical-supplies-section">
-    <h2>Insumos Médicos</h2>
-    <ul>
-        <li>Medicamentos obstétricos</li>
-        <li>Equipos de monitoreo fetal</li>
-        <li>Material quirúrgico estéril</li>
-        <li>Medicamentos para el control de la presión arterial</li>
-        <li>Suplementos nutricionales para la madre y el bebé</li>
-    </ul>
-</section>
-
-    <section class="social-work-section">
-    <h2>Emprendimientos y Labor Social</h2>
-    <div class="pyramid">
+        <h2>Insumos Médicos</h2>
         <ul>
-            <li>Desarrollo de proyectos comunitarios</li>
-            <li>Educación y capacitaciones en salud reproductiva</li>
-            <li>Asistencia social a comunidades rurales</li>
+            <li>Medicamentos obstétricos</li>
+            <li>Equipos de monitoreo fetal</li>
+            <li>Material quirúrgico estéril</li>
+            <li>Medicamentos para el control de la presión arterial</li>
+            <li>Suplementos nutricionales para la madre y el bebé</li>
         </ul>
-    </div>
-</section>
+    </section>
 
-   <section class="contact-info-section">
-    <h2>Contacto</h2>
-    <p>Correo: contacto@aso.com</p>
-    <p>Teléfono: +593 99 999 999</p>
-</section>
+    <!-- Emprendimientos y Labor Social -->
+    <section class="social-work-section">
+        <h2>Emprendimientos y Labor Social</h2>
+        <div class="pyramid">
+            <ul>
+                <li>Desarrollo de proyectos comunitarios</li>
+                <li>Educación y capacitaciones en salud reproductiva</li>
+                <li>Asistencia social a comunidades rurales</li>
+            </ul>
+        </div>
+    </section>
 
+    <!-- Contacto -->
+    <section class="contact-info-section">
+        <h2>Contacto</h2>
+        <p>Correo: contacto@aso.com</p>
+        <p>Teléfono: +593 99 999 999</p>
+    </section>
+
+    <!-- Sección de Cursos -->
+    <section class="courses-section">
+        <h2>Nuestros Cursos</h2>
+        
+        <div class="course-card">
+            <p class="course-title">Curso de Atención Obstétrica</p>
+            <p>Aprende sobre técnicas avanzadas en atención obstétrica.</p>
+            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
+        </div>
+
+        <div class="course-card">
+            <p class="course-title">Próximos Cursos</p>
+            <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
+            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
+        </div>
+    </section>
+    
+    <!-- Pie de Página con los Derechos de Autor -->
     <footer>
         <p>&copy; 2025 Red de Consultorios ASO. Todos los derechos reservados.</p>
     </footer>
-    
+
     <!-- Botón de WhatsApp -->
     <a href="https://wa.me/593999999999" class="contact-btn">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
@@ -305,15 +337,15 @@
 
     <script>
         // Añadir la clase 'visible' cuando las secciones estén en la vista
-window.addEventListener('scroll', function () {
-    const sections = document.querySelectorAll('.history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
-    sections.forEach(section => {
-        const sectionTop = section.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 100) {
-            section.classList.add('visible');
-        }
-    });
-});
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.hero, .courses-section, .history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        });
     </script>
 
 </body>
