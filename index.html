@@ -15,6 +15,18 @@
             background-color: #f7f7f7;
         }
 
+        /* Animaciones */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
         /* Encabezado */
         header {
             background-color: #6a4c9c;
@@ -39,77 +51,20 @@
             left: 20px;
         }
 
-        /* Sección Principal (Hero) */
-        .hero {
-            background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
-
-        .hero.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .hero h2 {
-            font-size: 36px;
-            margin: 0;
-        }
-
-        .hero p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
-
-        /* Sección de Cursos */
-        .courses-section {
-            margin: 30px auto;
+        /* Secciones */
+        section {
             padding: 30px;
             background-color: white;
             border-radius: 10px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
             max-width: 800px;
+            margin: 30px auto;
         }
 
-        .courses-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .course-card {
-            background-color: #f1f1f1;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .course-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .course-btn {
+        .button {
             display: inline-block;
-            background-color: #1877F2; /* Azul de Facebook */
+            background-color: #1877F2;
             color: white;
             padding: 10px 20px;
             font-size: 18px;
@@ -119,8 +74,25 @@
             transition: background 0.3s ease;
         }
 
-        .course-btn:hover {
-            background-color: #145dbf; /* Azul más oscuro */
+        .button:hover {
+            background-color: #145dbf;
+        }
+
+        /* Pirámide */
+        .pyramid {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .pyramid div {
+            background-color: #6a4c9c;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            width: 60%;
+            text-align: center;
+            border-radius: 5px;
         }
 
         /* Pie de Página */
@@ -137,102 +109,68 @@
             font-size: 18px;
         }
 
-        /* Botón de WhatsApp */
-        .contact-btn {
-            background-color: #25d366;
-            color: white;
-            font-size: 18px;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1;
-        }
-
-        .contact-btn img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
         /* Estilos para móvil */
         @media (max-width: 768px) {
             header h1 {
                 font-size: 30px;
             }
-
-            .hero h2 {
-                font-size: 28px;
-            }
-
-            .hero p {
-                font-size: 18px;
-            }
-
-            .contact-btn {
-                font-size: 16px;
-                padding: 12px 25px;
-            }
-
-            .course-btn {
-                font-size: 16px;
-                padding: 12px 25px;
-            }
         }
-
     </style>
 </head>
 <body>
 
-    <!-- Header -->
     <header>
         <img src="https://i.postimg.cc/zGkTZzB8/logo-png.jpg" alt="Logo ASO" class="logo">
         <h1>Bienvenidos a la red de Consultorios ASO</h1>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <h2>Consultorios de Obstetricia</h2>
-        <p>Servicio Profesional en Todo Ecuador</p>
+    <section class="fade-in">
+        <h2>Historia de la Asociación</h2>
+        <p>Somos una organización con años de experiencia en la atención obstétrica.</p>
     </section>
 
-    <!-- Sección de Cursos -->
-    <section class="courses-section">
-        <h2>Nuestros Cursos</h2>
-        
-        <div class="course-card">
-            <p class="course-title">Curso de Atención Obstétrica</p>
-            <p>Aprende sobre técnicas avanzadas en atención obstétrica.</p>
-            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
-        </div>
+    <section class="fade-in">
+        <h2>¿Quiénes Somos?</h2>
+        <p>Un equipo de profesionales comprometidos con la salud materna y neonatal.</p>
+    </section>
 
-        <div class="course-card">
-            <p class="course-title">Próximos Cursos</p>
-            <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
-            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
+    <section class="fade-in">
+        <h2>Red de Consultorios</h2>
+        <p>Contamos con consultorios en todo el país.</p>
+        <a href="https://maps.example.com" target="_blank" class="button">Ver Consultorios</a>
+    </section>
+
+    <section class="fade-in">
+        <h2>Insumos Médicos</h2>
+        <ul>
+            <li>Antisépticos</li>
+            <li>Instrumental Quirúrgico</li>
+            <li>Equipos de Monitoreo</li>
+        </ul>
+    </section>
+
+    <section class="fade-in">
+        <h2>Emprendimientos y Labor Social</h2>
+        <div class="pyramid">
+            <div>Atención Médica</div>
+            <div>Capacitación</div>
+            <div>Proyectos Sociales</div>
         </div>
     </section>
-    
-    <!-- Pie de Página con los Derechos de Autor -->
+
+    <section class="fade-in">
+        <h2>Contacto</h2>
+        <p>Email: contacto@aso.com</p>
+        <p>Teléfono: +593 999999999</p>
+    </section>
+
     <footer>
         <p>&copy; 2025 Red de Consultorios ASO. Todos los derechos reservados.</p>
     </footer>
 
-    <!-- Botón de WhatsApp -->
-    <a href="https://wa.me/593999999999" class="contact-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-        Contactar vía WhatsApp
-    </a>
-
     <script>
-        // Añadir la clase 'visible' cuando las secciones estén en la vista
         window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('.hero, .courses-section');
+            const sections = document.querySelectorAll('.fade-in');
             sections.forEach(section => {
                 const sectionTop = section.getBoundingClientRect().top;
                 if (sectionTop < window.innerHeight - 100) {
