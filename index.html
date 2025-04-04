@@ -280,7 +280,7 @@
             }
         }
 
-     /* Estilo para carrito de compras */
+        /* Estilo para carrito de compras */
 .cart-btn {
     background-color: #ff6600;
     color: white;
@@ -310,23 +310,35 @@
     vertical-align: middle;
 }
 
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    /* Botón del carrito */
+/* Ajustes para pantallas móviles */
+@media screen and (max-width: 768px) {
     .cart-btn {
-        bottom: 20px; /* Ajustar la distancia desde la parte inferior */
-        right: 20px; /* Ajustar la distancia desde el lado derecho */
-        padding: 12px 20px; /* Reducir el padding para que no sea tan grande */
-        font-size: 16px; /* Reducir el tamaño del texto */
+        bottom: 80px; /* Ajusta la distancia inferior en móviles */
+        right: 20px;  /* Ajusta la distancia derecha en móviles */
+        padding: 12px 25px; /* Reduce el tamaño del botón */
+        font-size: 16px;    /* Reduce el tamaño de la fuente */
     }
 
-    /* Ajustes para iconos dentro de los botones */
     .cart-icon {
-        width: 20px;
+        width: 20px; /* Reduce el tamaño del ícono en móviles */
         height: 20px;
-        margin-right: 8px; /* Reducir el espacio entre el ícono y el texto */
     }
 }
+
+@media screen and (max-width: 480px) {
+    .cart-btn {
+        bottom: 60px; /* Más cerca del borde inferior en pantallas pequeñas */
+        right: 15px;  /* Ajusta la posición derecha */
+        padding: 10px 20px; /* Ajusta aún más el tamaño del botón */
+        font-size: 14px; /* Reduce más el tamaño de la fuente */
+    }
+
+    .cart-icon {
+        width: 18px; /* Ajusta el tamaño del ícono */
+        height: 18px;
+    }
+}
+
 
         /* Estilos del chatbot (Formulario) */
         #chatbotForm {
