@@ -345,63 +345,46 @@
         }
 
         /* Estilos responsive para móviles */
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
     header {
         padding: 20px 10px;
+        text-align: center;
     }
 
     header h1 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .logo {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
         top: 10px;
         left: 10px;
     }
 
-    .hero {
-        height: auto;
-        padding: 40px 20px;
-    }
-
     .hero h2 {
-        font-size: 26px;
+        font-size: 24px;
     }
 
     .hero p {
         font-size: 16px;
     }
 
-    .courses-section,
-    .history-section,
-    .about-us-section,
-    .consulting-network-section,
-    .medical-supplies-section,
-    .social-work-section,
-    .contact-info-section {
-        padding: 20px 15px;
-        margin: 20px 10px;
-    }
-
-    .course-title {
-        font-size: 20px;
-    }
-
-    .btn-consulting,
-    .course-btn,
-    .platform-btn {
-        font-size: 16px;
+    .cart-btn,
+    .contact-btn {
         padding: 10px 20px;
+        font-size: 16px;
+        bottom: 20px;
+        right: 20px;
     }
 
     #chatbotForm {
         width: 90%;
         right: 5%;
-        bottom: 100px;
+        bottom: 90px;
     }
-
+}
+        
     .cart-btn,
     .contact-btn {
         right: 10px;
@@ -494,14 +477,14 @@
             <p class="course-title">Próximos Cursos</p>
             <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
             <!-- Botón Agregar al carrito -->
-            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)" class="course-btn">Agregar al carrito</button>
+            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)" class="cart-btn">Agregar al carrito</button>
              <!-- Botón de PayPhone -->
             <a href="https://payp.page.link/yna4m" target="_blank" class="course-btn" style="background-color: #ff6600;">
                 Pagar con PayPhone
             </a>
             <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
              <!-- Botón Agregar al carrito -->
-            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)" class="course-btn">Agregar al carrito</button>
+            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)" class="cart-btn">Agregar al carrito</button>
         </div>
 
         <!-- Sección de Plataforma -->
