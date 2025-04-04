@@ -442,64 +442,27 @@
     </section>
 
     <!-- Botón de WhatsApp -->
-    <a href="https://wa.me/1234567890" class="contact-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/WhatsApp.svg" alt="WhatsApp"> Contactar por WhatsApp
-    </a>
-    
-    <!-- Formulario de Chatbot -->
-    <div id="chatbotForm">
-        <h3>Hola, ¿En qué puedo ayudarte?</h3>
-        <input type="text" placeholder="Escribe tu mensaje...">
-        <select>
-            <option value="">Selecciona el curso...</option>
-            <option value="curso1">Curso 1</option>
-            <option value="curso2">Curso 2</option>
-        </select>
-        <button>Enviar</button>
-    </div>
+<a href="javascript:void(0);" class="contact-btn" onclick="sendMessage()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/WhatsApp.svg" alt="WhatsApp"> Contactar por WhatsApp
+</a>
 
-     <script>
-        // Animar las secciones al hacer scroll
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('.hero, .courses-section, .history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        });
-    </script>
+<!-- Formulario de Chatbot -->
+<div id="chatbotForm">
+    <h3>Hola, ¿En qué puedo ayudarte?</h3>
+    <input type="text" placeholder="Escribe tu mensaje..." id="userMessage">
+    <select id="courseSelect">
+        <option value="">Selecciona el curso...</option>
+        <option value="curso1">Curso 1</option>
+        <option value="curso2">Curso 2</option>
+    </select>
+    <button type="button" onclick="sendMessage()">Enviar</button>
+</div>
 
-    <!-- Carrito de Compras -->
-    <!-- Botón fijo de añadir al carrito -->
-    <a href="carrito.html" class="cart-btn">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Shopping_cart_icon.svg" alt="Carrito" class="cart-icon">
-    Ver Carrito
-    </a>
-
-    <footer>
-        <p>&copy; 2025 Consultorios ASO. Todos los derechos reservados</p>
-    </footer>
-
-    <script>
-        // Mostrar la sección principal cuando se haga scroll
-        window.addEventListener('scroll', function() {
-            let sections = document.querySelectorAll('.history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
-            sections.forEach(function(section) {
-                let sectionTop = section.getBoundingClientRect().top;
-                let windowHeight = window.innerHeight;
-                if (sectionTop < windowHeight - 100) {
-                    section.classList.add('visible');
-                }
-            });
-        });
-
-       <script>
+<script>
     // Función para generar el mensaje de WhatsApp y redirigir
     function sendMessage() {
-        var userMessage = document.getElementById("userMessage").value;
-        var selectedCourse = document.getElementById("courseSelect").value;
+        var userMessage = document.querySelector("#chatbotForm input[type='text']").value;
+        var selectedCourse = document.querySelector("#chatbotForm select").value;
         var message = "Hola, estoy interesado en el curso: " + selectedCourse + ".\n" + "Mensaje adicional: " + userMessage;
 
         // Crear enlace de WhatsApp con el mensaje
@@ -510,13 +473,38 @@
     }
 </script>
 
-    <script>
-  function agregarAlCarrito(nombre, precio) {
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-    carrito.push({ nombre, precio });
-    localStorage.setItem('carrito', JSON.stringify(carrito));
-    alert(`Se agregó "${nombre}" al carrito.`);
-  }
+<!-- Carrito de Compras -->
+<!-- Botón fijo de añadir al carrito -->
+<a href="carrito.html" class="cart-btn">
+    <img src="https://cdn.openai.com/data/assistant/images/carrito_compras/A_digital_vector_graphic_shows_a_shopping_cart_ico.png" alt="Carrito" class="cart-icon">
+    Ver Carrito
+</a>
+
+<footer>
+    <p>&copy; 2025 Consultorios ASO. Todos los derechos reservados</p>
+</footer>
+
+<script>
+    // Animar las secciones al hacer scroll
+    window.addEventListener('scroll', function () {
+        const sections = document.querySelectorAll('.hero, .courses-section, .history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
+        sections.forEach(section => {
+            const sectionTop = section.getBoundingClientRect().top;
+            if (sectionTop < window.innerHeight - 100) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
+
+<script>
+    // Función para agregar productos al carrito
+    function agregarAlCarrito(nombre, precio) {
+        let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+        carrito.push({ nombre, precio });
+        localStorage.setItem('carrito', JSON.stringify(carrito));
+        alert(`Se agregó "${nombre}" al carrito.`);
+    }
 </script>
 
 </body>
