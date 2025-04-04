@@ -442,11 +442,10 @@
     </section>
 
     <!-- Botón de WhatsApp -->
-    <a href="javascript:void(0);" onclick="toggleChatbot()" id="whatsappButton">
+    <!-- Botón de WhatsApp (parte inferior derecha) -->
+<a href="javascript:void(0);" onclick="toggleChatbot()" id="whatsappButton" style="position: fixed; bottom: 20px; right: 20px; z-index: 999;">
   <img src="img/whatsapp-icon.png" alt="WhatsApp" style="width: 60px; height: 60px;">
 </a>
-        Contactar vía WhatsApp
-    </a>
     
     <!-- Formulario Chatbot -->
 <div id="chatbotForm" style="display: none; position: fixed; bottom: 100px; right: 30px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000;">
@@ -474,17 +473,6 @@
                 }
             });
         });
-
-        // Función para interactuar con el chatbot
-        function openWhatsAppChat() {
-            const userMessage = prompt("¡Hola! Soy el asistente de ASO. ¿En qué curso estás interesado?");
-            if (userMessage) {
-                window.open(`https://wa.me/593984235123?text=${encodeURIComponent(userMessage)}`, "_blank");
-            }
-        }
-
-        // Llamar a la función del chatbot al cargar la página
-        window.onload = openWhatsAppChat;
     </script>
 
     <!-- Carrito de Compras -->
