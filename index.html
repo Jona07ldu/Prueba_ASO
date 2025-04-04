@@ -7,141 +7,270 @@
     <title>Bienvenidos a la red de Consultorios ASO</title>
     <style>
       /* Estilos Generales */
-body {
-    font-family: Arial, sans-serif;
-    color: black;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-}
+        /* Estilos Generales */
+        body {
+            font-family: Arial, sans-serif;
+            color: black;
+            margin: 0;
+            padding: 0;
+            background-color: #f7f7f7;
+        }
 
-header {
-    background-color: #6a4c9c;
-    color: white;
-    text-align: center;
-    padding: 40px 0;
-    position: relative;
-    margin-bottom: 30px;
-}
+        /* Encabezado */
+        header {
+            background-color: #6a4c9c;
+            color: white;
+            text-align: center;
+            padding: 40px 0;
+            position: relative;
+            margin-bottom: 30px;
+        }
 
-header h1 {
-    margin: 0;
-    font-size: 40px;
-}
+        header h1 {
+            margin: 0;
+            font-size: 40px;
+        }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    position: absolute;
-    top: 20px;
-    left: 20px;
-}
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
 
-/* Media Queries para dispositivos móviles */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 28px; /* Reducir el tamaño del encabezado en móviles */
-    }
+        /* Sección Principal (Hero) */
+        .hero {
+            background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+        }
 
-    header {
-        padding: 20px 0; /* Reducir el padding del encabezado en móviles */
-    }
+        .hero.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-    .logo {
-        width: 100px;
-        height: 100px;
-        top: 10px;
-        left: 10px;
-    }
-}
+        .hero h2 {
+            font-size: 36px;
+            margin: 0;
+        }
 
-/* Sección Principal (Hero) */
-.hero {
-    background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    padding: 20px;
-    margin-bottom: 30px;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-}
+        .hero p {
+            font-size: 20px;
+            margin-top: 10px;
+        }
 
-.hero.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+        /* Estilos para las secciones adicionales */
+        .history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section {
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+            max-width: 800px;
+        }
 
-.hero h2 {
-    font-size: 36px;
-    margin: 0;
-}
+        /* Animación de las secciones al hacer scroll */
+        .history-section.visible, .about-us-section.visible, .consulting-network-section.visible, .medical-supplies-section.visible, .social-work-section.visible, .contact-info-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-.hero p {
-    font-size: 20px;
-    margin-top: 10px;
-}
+        /* Botón para redirigir a los consultorios */
+        .btn-consulting {
+            background-color: #6a4c9c;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
 
-/* Sección de Cursos */
-.courses-section {
-    margin: 30px auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 1s ease, transform 1s ease;
-    max-width: 800px;
-}
+        .btn-consulting:hover {
+            background-color: #4f3b7e;
+        }
 
-.courses-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+        /* Estilo de la pirámide */
+        .pyramid {
+            margin: 30px auto;
+            max-width: 500px;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+        }
 
-.course-card {
-    background-color: #f1f1f1;
-    padding: 20px;
-    margin: 15px 0;
-    border-radius: 10px;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-}
+        .pyramid ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
 
-.course-title {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
+        .pyramid li {
+            font-size: 18px;
+            margin: 10px 0;
+        }
 
-.course-btn {
-    display: inline-block;
-    background-color: #ff6600; /* Color para el botón de carrito */
-    color: white;
-    padding: 10px 20px;
-    font-size: 18px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-    margin-top: 15px; /* Asegura separación entre el texto y el botón */
-}
+        /* Sección de Cursos */
+        .courses-section {
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 1s ease, transform 1s ease;
+            max-width: 800px;
+        }
 
-.course-btn:hover {
-    background-color: #e55b00; /* Cambio de color al hacer hover */
-}
+        .courses-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
 
-/* Botón de carrito de compras */
+        .course-card {
+            background-color: #f1f1f1;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .course-title {
+            font-size: 22px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .course-btn {
+            display: inline-block;
+            background-color: #1877F2; /* Azul de Facebook */
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .course-btn:hover {
+            background-color: #145dbf; /* Azul más oscuro */
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: #6a4c9c;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Botón de WhatsApp */
+        .contact-btn {
+            background-color: #25d366;
+            color: white;
+            font-size: 18px;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .contact-btn img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+         /* Sección de Plataforma */
+        .platform-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #eef4ff;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .platform-section h3 {
+            font-size: 24px;
+            color: #2a5db0;
+            margin-bottom: 10px;
+        }
+
+        .platform-section p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        /* Botón de Plataforma */
+        .platform-btn {
+            background-color: #1877F2;
+            color: white;
+            padding: 12px 25px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s ease;
+            display: inline-block;
+        }
+
+        .platform-btn:hover {
+            background-color: #145dbf;
+        }
+
+        /* Animación */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Estilo para carrito de compras */
 .cart-btn {
     background-color: #ff6600;
     color: white;
@@ -161,7 +290,7 @@ header h1 {
 }
 
 .cart-btn:hover {
-    background-color: #e55b00;
+    background-color: #e55b00; /* Cambiar color al hacer hover */
 }
 
 .cart-icon {
@@ -171,72 +300,50 @@ header h1 {
     vertical-align: middle;
 }
 
-/* Botón de contacto */
-.contact-btn {
-    background-color: #25d366;
-    color: white;
-    font-size: 18px;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    z-index: 1;
-    text-align: center;
-}
+        /* Estilos del chatbot (Formulario) */
+        #chatbotForm {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: white;
+            padding: 20px;
+            width: 300px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            display: none;
+            z-index: 10;
+        }
 
-.contact-btn img {
-    width: 24px;
-    height: 24px;
-    margin-right: 10px;
-    vertical-align: middle;
-}
+        #chatbotForm h3 {
+            margin-top: 0;
+            font-size: 20px;
+            color: #333;
+        }
 
-/* Ajustes para pantallas móviles */
-@media screen and (max-width: 768px) {
-    .cart-btn, .contact-btn {
-        padding: 12px 25px;
-        font-size: 16px;
-        bottom: 80px;  /* Ajusta la posición del botón */
-        right: 20px;   /* Ajusta la distancia a la derecha */
-    }
+        #chatbotForm input[type="text"], #chatbotForm select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
 
-    .cart-icon, .contact-btn img {
-        width: 20px;
-        height: 20px;
-    }
-}
+        #chatbotForm button {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
 
-@media screen and (max-width: 480px) {
-    .cart-btn, .contact-btn {
-        bottom: 60px; /* Más cerca del borde inferior en pantallas pequeñas */
-        right: 15px;
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-    .cart-icon, .contact-btn img {
-        width: 18px;
-        height: 18px;
-    }
-}
-
-footer {
-    background-color: #6a4c9c;
-    color: white;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 30px;
-}
-
-footer p {
-    margin: 0;
-    font-size: 18px;
-}
-
+        #chatbotForm button:hover {
+            background-color: #128c7e;
+        }
    
     </style>
 </head>
