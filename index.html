@@ -434,6 +434,30 @@
         Contactar vía WhatsApp
     </a>
 
+     <script>
+        // Animar las secciones al hacer scroll
+        window.addEventListener('scroll', function () {
+            const sections = document.querySelectorAll('.hero, .courses-section, .history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
+            sections.forEach(section => {
+                const sectionTop = section.getBoundingClientRect().top;
+                if (sectionTop < window.innerHeight - 100) {
+                    section.classList.add('visible');
+                }
+            });
+        });
+
+        // Función para interactuar con el chatbot
+        function openWhatsAppChat() {
+            const userMessage = prompt("¡Hola! Soy el asistente de ASO. ¿En qué curso estás interesado?");
+            if (userMessage) {
+                window.open(`https://wa.me/593984235123?text=${encodeURIComponent(userMessage)}`, "_blank");
+            }
+        }
+
+        // Llamar a la función del chatbot al cargar la página
+        window.onload = openWhatsAppChat;
+    </script>
+
     <!-- Carrito de Compras -->
     <a href="#" class="cart-btn">
         <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Shopping_cart_icon.svg" alt="Carrito">
