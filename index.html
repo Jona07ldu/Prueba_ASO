@@ -501,26 +501,31 @@
         });
 
         // Mostrar el formulario del chatbot
-        <script>
+       <script>
     function toggleChatbot() {
-        const chatbot = document.getElementById('chatbotForm');
-        chatbot.style.display = (chatbot.style.display === 'none' || chatbot.style.display === '') ? 'block' : 'none';
+        var form = document.getElementById("chatbotForm");
+        if (form.style.display === "none" || form.style.display === "") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
     }
 
     function sendToWhatsApp() {
-        const curso = document.getElementById("courseSelect").value;
-        const nombre = document.getElementById("userName").value;
+        var nombre = document.getElementById("userName").value;
+        var curso = document.getElementById("courseSelect").value;
 
-        if (curso && nombre) {
-            const mensaje = `Hola, soy ${nombre} y estoy interesado en el siguiente curso: ${curso}`;
-            const whatsappURL = `https://wa.me/593984235123?text=${encodeURIComponent(mensaje)}`;
-            window.open(whatsappURL, '_blank');
-            document.getElementById("chatbotForm").style.display = "none"; // Oculta el formulario después de enviar
+        if (nombre && curso) {
+            var mensaje = "Hola, soy " + nombre + ". Estoy interesado en el " + curso;
+            var numero = "593999999999"; // Reemplaza con el número de WhatsApp real sin el "+" inicial
+            var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
+            window.open(url, '_blank');
         } else {
-            alert("Por favor, completa todos los campos.");
+            alert("Por favor completa todos los campos.");
         }
     }
-    </script>
+</script>
+
     <script>
   function agregarAlCarrito(nombre, precio) {
     let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
