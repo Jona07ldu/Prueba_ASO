@@ -238,67 +238,49 @@
             vertical-align: middle;
         }
 
-        /* Sección de Plataforma */
-        .platform-section {
-            margin-top: 30px;
+        /* Estilos del chatbot (Formulario) */
+        #chatbotForm {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background-color: white;
             padding: 20px;
-            background-color: #eef4ff;
-            border-radius: 10px;
+            width: 300px;
             box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            animation: fadeInUp 1s ease-in-out;
+            border-radius: 8px;
+            display: none;
+            z-index: 10;
         }
 
-        .platform-section h3 {
-            font-size: 24px;
-            color: #2a5db0;
-            margin-bottom: 10px;
-        }
-
-        .platform-section p {
-            font-size: 18px;
+        #chatbotForm h3 {
+            margin-top: 0;
+            font-size: 20px;
             color: #333;
-            margin-bottom: 15px;
         }
 
-        /* Animación */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        #chatbotForm input[type="text"], #chatbotForm select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
         }
 
-        /* Estilos para móvil */
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 20px;
-            }
+        #chatbotForm button {
+            background-color: #25d366;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            width: 100%;
+        }
 
-            .logo {
-                width: 80px;
-                height: 80px;
-                top: 5px;
-                left: 5px;
-            }
-
-            .hero h2 {
-                font-size: 18px;
-            }
-
-            .cart-btn {
-                bottom: 150px;
-                right: 20px;
-            }
-
-            .contact-btn {
-                bottom: 90px;
-                right: 20px;
-            }
+        #chatbotForm button:hover {
+            background-color: #128c7e;
         }
 
     </style>
@@ -317,12 +299,82 @@
         <p>Servicio Profesional en Todo Ecuador</p>
     </section>
 
-    <!-- Sección de Plataforma -->
-    <div class="platform-section">
-        <h3>Accede a nuestra plataforma</h3>
-        <p>Amplía tus conocimientos con nuestros cursos especializados.</p>
-        <a href="https://plataforma-curso.com" target="_blank" class="platform-btn">Ingresar</a>
-    </div>
+     <!-- Historia de la Asociación -->
+    <section class="history-section">
+        <h2>Historia de la Asociación</h2>
+        <p>La Red de Consultorios ASO comenzó como una iniciativa para mejorar la atención obstétrica en Ecuador...</p>
+    </section>
+
+    <!-- Quiénes Somos -->
+    <section class="about-us-section">
+        <h2>Quiénes Somos</h2>
+        <p>Somos una red de profesionales dedicados a brindar atención integral a mujeres durante el embarazo...</p>
+    </section>
+
+    <!-- Red de Consultorios -->
+    <section class="consulting-network-section">
+        <h2>Red de Consultorios</h2>
+        <p>Contamos con una extensa red de consultorios en todo el país...</p>
+        <a href="http://enlace-a-los-consultorios.com" target="_blank" class="btn-consulting">Ver Consultorios</a>
+    </section>
+
+    <!-- Insumos Médicos -->
+    <section class="medical-supplies-section">
+        <h2>Insumos Médicos</h2>
+        <ul>
+            <li>Medicamentos obstétricos</li>
+            <li>Equipos de monitoreo fetal</li>
+            <li>Material quirúrgico estéril</li>
+            <li>Medicamentos para el control de la presión arterial</li>
+            <li>Suplementos nutricionales para la madre y el bebé</li>
+        </ul>
+    </section>
+
+    <!-- Emprendimientos y Labor Social -->
+    <section class="social-work-section">
+        <h2>Emprendimientos y Labor Social</h2>
+        <div class="pyramid">
+            <ul>
+                <li>Desarrollo de proyectos comunitarios</li>
+                <li>Educación y capacitaciones en salud reproductiva</li>
+                <li>Asistencia social a comunidades rurales</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Sección de Cursos -->
+    <section class="courses-section">
+        <h2>Nuestros Cursos</h2>
+        <div class="course-card">
+            <p class="course-title">Curso de Atención Obstétrica</p>
+            <p>Aprende sobre técnicas avanzadas en atención obstétrica.</p>
+            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
+        </div>
+
+        <div class="course-card">
+            <p class="course-title">Próximos Cursos</p>
+            <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
+            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
+             <!-- Botón de PayPhone -->
+            <a href="https://payp.page.link/yna4m" target="_blank" class="course-btn" style="background-color: #ff6600;">
+                Pagar con PayPhone
+            </a>
+        </div>
+
+        <!-- Sección de Plataforma -->
+        <div class="platform-section">
+            <h3>Accede a nuestra plataforma</h3>
+            <p>Amplía tus conocimientos con nuestros cursos especializados.</p>
+            <a href="https://plataforma-curso.com" target="_blank" class="platform-btn">Ingresar</a>
+        </div>
+    </section>
+    
+    <!-- Contacto -->
+    <section class="contact-info-section">
+        <h2>Contacto</h2>
+        <p>Correo: contacto@aso.com</p>
+        <p>Teléfono: +593 99 999 999</p>
+    </section>
 
     <!-- Botón de WhatsApp -->
     <a href="https://wa.me/593984235123?text=Hola%20ASO,%20estoy%20interesado%20en%20los%20cursos" class="contact-btn">
@@ -336,28 +388,58 @@
         Ver Carrito
     </a>
 
+    <!-- Formulario Chatbot -->
+    <div id="chatbotForm">
+        <h3>¡Hola! ¿En qué curso estás interesado?</h3>
+        <form id="chatbotQuestionForm">
+            <select id="courseSelect" required>
+                <option value="">Selecciona un curso...</option>
+                <option value="Curso 1: Introducción a la Obstetricia">Curso 1: Introducción a la Obstetricia</option>
+                <option value="Curso 2: Técnicas Avanzadas de Obstetricia">Curso 2: Técnicas Avanzadas de Obstetricia</option>
+                <option value="Curso 3: Gestión de Consultorios Obstétricos">Curso 3: Gestión de Consultorios Obstétricos</option>
+            </select>
+            <input type="text" id="userName" placeholder="Tu nombre" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Consultorios ASO</p>
+    </footer>
+
     <script>
-        // Animar las secciones al hacer scroll
-        window.addEventListener('scroll', function () {
-            const sections = document.querySelectorAll('.hero, .courses-section, .history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
-            sections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                if (sectionTop < window.innerHeight - 100) {
+        // Mostrar la sección principal cuando se haga scroll
+        window.addEventListener('scroll', function() {
+            let sections = document.querySelectorAll('.history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section');
+            sections.forEach(function(section) {
+                let sectionTop = section.getBoundingClientRect().top;
+                let windowHeight = window.innerHeight;
+                if (sectionTop < windowHeight - 100) {
                     section.classList.add('visible');
                 }
             });
         });
 
-        // Función para interactuar con el chatbot
-        function openWhatsAppChat() {
-            const userMessage = prompt("¡Hola! Soy el asistente de ASO. ¿En qué curso estás interesado?");
-            if (userMessage) {
-                window.open(`https://wa.me/593984235123?text=${encodeURIComponent(userMessage)}`, "_blank");
-            }
+        // Mostrar el formulario del chatbot
+        function showChatbot() {
+            document.getElementById('chatbotForm').style.display = 'block';
         }
 
-        // Llamar a la función del chatbot al cargar la página
-        window.onload = openWhatsAppChat;
+        // Abrir el chatbot después de un clic
+        document.querySelector('.contact-btn').addEventListener('click', function() {
+            showChatbot();
+        });
+
+        // Enviar datos del formulario del chatbot
+        document.getElementById('chatbotQuestionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const course = document.getElementById('courseSelect').value;
+            const name = document.getElementById('userName').value;
+
+            const url = `https://wa.me/593984235123?text=Hola,%20me%20interesa%20el%20curso:%20${course}%20y%20mi%20nombre%20es%20${name}`;
+            window.open(url, '_blank');
+        });
     </script>
 
 </body>
