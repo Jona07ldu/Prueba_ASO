@@ -62,6 +62,29 @@
         .nav-bar a:hover {
             background-color: #4f3b7e;
         }
+        
+        .top-menu {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.top-menu a {
+  background-color: #ffffff;
+  color: #6a4c9c;
+  padding: 10px 20px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 20px;
+  font-weight: bold;
+  border: 2px solid #6a4c9c;
+  transition: all 0.3s ease;
+}
+
+.top-menu a:hover {
+  background-color: #6a4c9c;
+  color: white;
+}
 
         /* Resto de las secciones */
          /* Sección Principal (Hero) */
@@ -317,6 +340,10 @@
     <div class="nav-bar">
         <a href="#cart">Carrito</a>
     </div>
+    
+    <nav class="top-menu">
+    <a href="#cart" class="btn-consulting">Carrito</a>
+</nav>
 
     <!-- Header -->
     <header>
@@ -394,14 +421,17 @@
         </div>
 
         <!-- Aquí colocamos el carrito de compras -->
-        <div class="cart-section">
-            <h2>Carrito de Compras</h2>
-            <p>Aquí aparecerán los productos seleccionados.</p>
-            <div id="cart-items">
+        <section id="cart" class="courses-section">
+  <h2>Carrito de Compras</h2>
+  <p>Aquí aparecerán los cursos que selecciones para comprar.</p>
+  <ul id="cart-items"></ul>
+  <p>Total: $<span id="cart-total">0.00</span></p>
+</section>
                 <!-- Aquí se llenarán los productos del carrito dinámicamente -->
             </div>
             <button id="checkout-btn" class="course-btn">Ir a Pagar</button>
         </div>
+        
          <!-- Sección de Plataforma -->
         <div class="platform-section">
             <h3>Accede a nuestra plataforma</h3>
