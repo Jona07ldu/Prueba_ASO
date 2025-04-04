@@ -269,7 +269,7 @@
             }
         }
 
-        /* Estilo para carrito de compras */
+     /* Estilo para carrito de compras */
 .cart-btn {
     background-color: #ff6600;
     color: white;
@@ -297,6 +297,24 @@
     height: 24px;
     margin-right: 10px;
     vertical-align: middle;
+}
+
+/* Media Queries para dispositivos móviles */
+@media (max-width: 768px) {
+    /* Botón del carrito */
+    .cart-btn {
+        bottom: 20px; /* Ajustar la distancia desde la parte inferior */
+        right: 20px; /* Ajustar la distancia desde el lado derecho */
+        padding: 12px 20px; /* Reducir el padding para que no sea tan grande */
+        font-size: 16px; /* Reducir el tamaño del texto */
+    }
+
+    /* Ajustes para iconos dentro de los botones */
+    .cart-icon {
+        width: 20px;
+        height: 20px;
+        margin-right: 8px; /* Reducir el espacio entre el ícono y el texto */
+    }
 }
 
         /* Estilos del chatbot (Formulario) */
