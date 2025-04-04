@@ -270,25 +270,34 @@
         }
 
         /* Estilo para carrito de compras */
-        .cart-btn {
-            background-color: #ff6600;
-            color: white;
-            padding: 15px 30px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            position: fixed;
-            bottom: 100px;
-            right: 30px;
-            z-index: 2;
-        }
+.cart-btn {
+    background-color: #ff6600;
+    color: white;
+    padding: 15px 30px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .cart-btn img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
+.cart-btn:hover {
+    background-color: #e55b00; /* Cambiar color al hacer hover */
+}
+
+.cart-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 
         /* Estilos del chatbot (Formulario) */
         #chatbotForm {
@@ -406,14 +415,15 @@
         <div class="course-card">
             <p class="course-title">Próximos Cursos</p>
             <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
-            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)">Agregar al carrito</button>
-            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
+            <!-- Botón Agregar al carrito -->
+            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)" class="course-btn">Agregar al carrito</button>
              <!-- Botón de PayPhone -->
             <a href="https://payp.page.link/yna4m" target="_blank" class="course-btn" style="background-color: #ff6600;">
                 Pagar con PayPhone
             </a>
             <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
-             <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)">Agregar al carrito</button>
+             <!-- Botón Agregar al carrito -->
+            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)" class="course-btn">Agregar al carrito</button>
         </div>
 
         <!-- Sección de Plataforma -->
@@ -462,9 +472,10 @@
     </script>
 
     <!-- Carrito de Compras -->
+    <!-- Botón fijo de añadir al carrito -->
     <a href="carrito.html" class="cart-btn">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Shopping_cart_icon.svg" alt="Carrito">
-        Ver Carrito
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Shopping_cart_icon.svg" alt="Carrito" class="cart-icon">
+    Ver Carrito
     </a>
 
     <!-- Formulario Chatbot -->
@@ -483,7 +494,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Consultorios ASO</p>
+        <p>&copy; 2025 Consultorios ASO. Todos los derechos reservados</p>
     </footer>
 
     <script>
