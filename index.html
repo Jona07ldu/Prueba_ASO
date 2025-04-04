@@ -406,11 +406,14 @@
         <div class="course-card">
             <p class="course-title">Próximos Cursos</p>
             <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
+            <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)">Agregar al carrito</button>
             <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
              <!-- Botón de PayPhone -->
             <a href="https://payp.page.link/yna4m" target="_blank" class="course-btn" style="background-color: #ff6600;">
                 Pagar con PayPhone
             </a>
+            <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
+             <button onclick="agregarAlCarrito('Curso de Lactancia Materna', 20)">Agregar al carrito</button>
         </div>
 
         <!-- Sección de Plataforma -->
@@ -517,6 +520,14 @@
             window.open(url, '_blank');
         });
     </script>
+    <script>
+  function agregarAlCarrito(nombre, precio) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.push({ nombre, precio });
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    alert(`Se agregó "${nombre}" al carrito.`);
+  }
+</script>
 
 </body>
 </html>
