@@ -6,41 +6,40 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Bienvenidos a la red de Consultorios ASO</title>
     <style>
-        /* Estilos Generales */
-        body {
-            font-family: Arial, sans-serif;
-            color: black;
-            margin: 0;
-            padding: 0;
-            background-color: #f7f7f7;
-        }
+      /* Estilos Generales */
+body {
+    font-family: Arial, sans-serif;
+    color: black;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+}
 
-        /* Encabezado */
-        header {
-            background-color: #6a4c9c;
-            color: white;
-            text-align: center;
-            padding: 40px 0;
-            position: relative;
-            margin-bottom: 30px;
-        }
+header {
+    background-color: #6a4c9c;
+    color: white;
+    text-align: center;
+    padding: 40px 0;
+    position: relative;
+    margin-bottom: 30px;
+}
 
-        header h1 {
-            margin: 0;
-            font-size: 40px;
-        }
+header h1 {
+    margin: 0;
+    font-size: 40px;
+}
 
-        .logo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            position: absolute;
-            top: 20px;
-            left: 20px;
-        }
-        /* Media Queries para dispositivos móviles */
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Media Queries para dispositivos móviles */
 @media (max-width: 768px) {
-    /* Ajustar el encabezado */
     header h1 {
         font-size: 28px; /* Reducir el tamaño del encabezado en móviles */
     }
@@ -48,239 +47,101 @@
     header {
         padding: 20px 0; /* Reducir el padding del encabezado en móviles */
     }
+
+    .logo {
+        width: 100px;
+        height: 100px;
+        top: 10px;
+        left: 10px;
+    }
 }
 
-        /* Sección Principal (Hero) */
-        .hero {
-            background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-            margin-bottom: 30px;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
-        }
+/* Sección Principal (Hero) */
+.hero {
+    background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 20px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+}
 
-        .hero.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        .hero h2 {
-            font-size: 36px;
-            margin: 0;
-        }
+.hero h2 {
+    font-size: 36px;
+    margin: 0;
+}
 
-        .hero p {
-            font-size: 20px;
-            margin-top: 10px;
-        }
+.hero p {
+    font-size: 20px;
+    margin-top: 10px;
+}
 
-        /* Estilos para las secciones adicionales */
-        .history-section, .about-us-section, .consulting-network-section, .medical-supplies-section, .social-work-section, .contact-info-section {
-            margin: 30px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
-            max-width: 800px;
-        }
+/* Sección de Cursos */
+.courses-section {
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease, transform 1s ease;
+    max-width: 800px;
+}
 
-        /* Animación de las secciones al hacer scroll */
-        .history-section.visible, .about-us-section.visible, .consulting-network-section.visible, .medical-supplies-section.visible, .social-work-section.visible, .contact-info-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.courses-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
 
-        /* Botón para redirigir a los consultorios */
-        .btn-consulting {
-            background-color: #6a4c9c;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
+.course-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
 
-        .btn-consulting:hover {
-            background-color: #4f3b7e;
-        }
+.course-title {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
 
-        /* Estilo de la pirámide */
-        .pyramid {
-            margin: 30px auto;
-            max-width: 500px;
-            padding: 20px;
-            background-color: #f1f1f1;
-            border-radius: 10px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-        }
+.course-btn {
+    display: inline-block;
+    background-color: #ff6600; /* Color para el botón de carrito */
+    color: white;
+    padding: 10px 20px;
+    font-size: 18px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+    margin-top: 15px; /* Asegura separación entre el texto y el botón */
+}
 
-        .pyramid ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+.course-btn:hover {
+    background-color: #e55b00; /* Cambio de color al hacer hover */
+}
 
-        .pyramid li {
-            font-size: 18px;
-            margin: 10px 0;
-        }
-
-        /* Sección de Cursos */
-        .courses-section {
-            margin: 30px auto;
-            padding: 30px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            opacity: 0;
-            transform: translateY(50px);
-            transition: opacity 1s ease, transform 1s ease;
-            max-width: 800px;
-        }
-
-        .courses-section.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .course-card {
-            background-color: #f1f1f1;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 10px;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-        }
-
-        .course-title {
-            font-size: 22px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
-
-        .course-btn {
-            display: inline-block;
-            background-color: #1877F2; /* Azul de Facebook */
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-        }
-
-        .course-btn:hover {
-            background-color: #145dbf; /* Azul más oscuro */
-        }
-
-        /* Pie de Página */
-        footer {
-            background-color: #6a4c9c;
-            color: white;
-            padding: 10px 0;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 18px;
-        }
-
-        /* Botón de WhatsApp */
-        .contact-btn {
-            background-color: #25d366;
-            color: white;
-            font-size: 18px;
-            padding: 15px 30px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin-top: 20px;
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            z-index: 1;
-            text-align: center;
-        }
-
-        .contact-btn img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
-            vertical-align: middle;
-        }
-
-         /* Sección de Plataforma */
-        .platform-section {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #eef4ff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-            animation: fadeInUp 1s ease-in-out;
-        }
-
-        .platform-section h3 {
-            font-size: 24px;
-            color: #2a5db0;
-            margin-bottom: 10px;
-        }
-
-        .platform-section p {
-            font-size: 18px;
-            color: #333;
-            margin-bottom: 15px;
-        }
-
-        /* Botón de Plataforma */
-        .platform-btn {
-            background-color: #1877F2;
-            color: white;
-            padding: 12px 25px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-            display: inline-block;
-        }
-
-        .platform-btn:hover {
-            background-color: #145dbf;
-        }
-
-        /* Animación */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        /* Estilo para carrito de compras */
+/* Botón de carrito de compras */
 .cart-btn {
     background-color: #ff6600;
     color: white;
@@ -300,7 +161,7 @@
 }
 
 .cart-btn:hover {
-    background-color: #e55b00; /* Cambiar color al hacer hover */
+    background-color: #e55b00;
 }
 
 .cart-icon {
@@ -310,141 +171,72 @@
     vertical-align: middle;
 }
 
+/* Botón de contacto */
+.contact-btn {
+    background-color: #25d366;
+    color: white;
+    font-size: 18px;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1;
+    text-align: center;
+}
+
+.contact-btn img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 /* Ajustes para pantallas móviles */
 @media screen and (max-width: 768px) {
-    .cart-btn {
-        bottom: 80px; /* Ajusta la distancia inferior en móviles */
-        right: 20px;  /* Ajusta la distancia derecha en móviles */
-        padding: 12px 25px; /* Reduce el tamaño del botón */
-        font-size: 16px;    /* Reduce el tamaño de la fuente */
+    .cart-btn, .contact-btn {
+        padding: 12px 25px;
+        font-size: 16px;
+        bottom: 80px;  /* Ajusta la posición del botón */
+        right: 20px;   /* Ajusta la distancia a la derecha */
     }
 
-    .cart-icon {
-        width: 20px; /* Reduce el tamaño del ícono en móviles */
+    .cart-icon, .contact-btn img {
+        width: 20px;
         height: 20px;
     }
 }
 
 @media screen and (max-width: 480px) {
-    .cart-btn {
+    .cart-btn, .contact-btn {
         bottom: 60px; /* Más cerca del borde inferior en pantallas pequeñas */
-        right: 15px;  /* Ajusta la posición derecha */
-        padding: 10px 20px; /* Ajusta aún más el tamaño del botón */
-        font-size: 14px; /* Reduce más el tamaño de la fuente */
+        right: 15px;
+        padding: 10px 20px;
+        font-size: 14px;
     }
 
-    .cart-icon {
-        width: 18px; /* Ajusta el tamaño del ícono */
+    .cart-icon, .contact-btn img {
+        width: 18px;
         height: 18px;
     }
 }
 
-
-        /* Estilos del chatbot (Formulario) */
-        #chatbotForm {
-            position: fixed;
-            bottom: 80px;
-            right: 20px;
-            background-color: white;
-            padding: 20px;
-            width: 300px;
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
-            display: none;
-            z-index: 10;
-        }
-
-        #chatbotForm h3 {
-            margin-top: 0;
-            font-size: 20px;
-            color: #333;
-        }
-
-        #chatbotForm input[type="text"], #chatbotForm select {
-            width: 100%;
-            padding: 10px;
-            margin-top: 10px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-
-        #chatbotForm button {
-            background-color: #25d366;
-            color: white;
-            padding: 10px 20px;
-            font-size: 18px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 10px;
-            width: 100%;
-        }
-
-        #chatbotForm button:hover {
-            background-color: #128c7e;
-        }
-
-        /* Estilos responsive para móviles */
-@media (max-width: 768px) {
-    header {
-        padding: 20px 10px;
-        text-align: center;
-    }
-
-    header h1 {
-        font-size: 24px;
-    }
-
-    .logo {
-        width: 80px;
-        height: 80px;
-        top: 10px;
-        left: 10px;
-    }
-
-    .hero h2 {
-        font-size: 24px;
-    }
-
-    .hero p {
-        font-size: 16px;
-    }
-
-    .cart-btn,
-    .contact-btn {
-        padding: 10px 20px;
-        font-size: 16px;
-        bottom: 20px;
-        right: 20px;
-    }
-
-    #chatbotForm {
-        width: 90%;
-        right: 5%;
-        bottom: 90px;
-    }
+footer {
+    background-color: #6a4c9c;
+    color: white;
+    padding: 10px 0;
+    text-align: center;
+    margin-top: 30px;
 }
-        
-    .cart-btn,
-    .contact-btn {
-        right: 10px;
-        padding: 10px 20px;
-        font-size: 16px;
-    }
 
-    .cart-icon,
-    .contact-btn img {
-        width: 20px;
-        height: 20px;
-        margin-right: 5px;
-    }
-
-    footer p {
-        font-size: 14px;
-        padding: 0 10px;
-    }
+footer p {
+    margin: 0;
+    font-size: 18px;
 }
+
    
     </style>
 </head>
