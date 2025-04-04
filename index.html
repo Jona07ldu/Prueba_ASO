@@ -39,7 +39,7 @@
             left: 20px;
         }
 
-       /* Sección Principal (Hero) */
+        /* Sección Principal (Hero) */
         .hero {
             background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
             background-size: cover;
@@ -207,6 +207,7 @@
             bottom: 30px;
             right: 30px;
             z-index: 1;
+            text-align: center;
         }
 
         .contact-btn img {
@@ -215,7 +216,28 @@
             margin-right: 10px;
             vertical-align: middle;
         }
-        
+
+        /* Estilo para carrito de compras */
+        .cart-btn {
+            background-color: #ff6600;
+            color: white;
+            padding: 15px 30px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            position: fixed;
+            bottom: 100px;
+            right: 30px;
+            z-index: 2;
+        }
+
+        .cart-btn img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
         /* Sección de Plataforma */
         .platform-section {
             margin-top: 30px;
@@ -239,23 +261,6 @@
             margin-bottom: 15px;
         }
 
-        /* Botón de Plataforma */
-        .platform-btn {
-            background-color: #1877F2;
-            color: white;
-            padding: 12px 25px;
-            font-size: 18px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s ease;
-            display: inline-block;
-        }
-
-        .platform-btn:hover {
-            background-color: #145dbf;
-        }
-
         /* Animación */
         @keyframes fadeInUp {
             from {
@@ -273,14 +278,26 @@
             header h1 {
                 font-size: 20px;
             }
+
             .logo {
                 width: 80px;
                 height: 80px;
                 top: 5px;
                 left: 5px;
             }
+
             .hero h2 {
                 font-size: 18px;
+            }
+
+            .cart-btn {
+                bottom: 150px;
+                right: 20px;
+            }
+
+            .contact-btn {
+                bottom: 90px;
+                right: 20px;
             }
         }
 
@@ -300,92 +317,23 @@
         <p>Servicio Profesional en Todo Ecuador</p>
     </section>
 
-    <!-- Historia de la Asociación -->
-    <section class="history-section">
-        <h2>Historia de la Asociación</h2>
-        <p>La Red de Consultorios ASO comenzó como una iniciativa para mejorar la atención obstétrica en Ecuador...</p>
-    </section>
-
-    <!-- Quiénes Somos -->
-    <section class="about-us-section">
-        <h2>Quiénes Somos</h2>
-        <p>Somos una red de profesionales dedicados a brindar atención integral a mujeres durante el embarazo...</p>
-    </section>
-
-    <!-- Red de Consultorios -->
-    <section class="consulting-network-section">
-        <h2>Red de Consultorios</h2>
-        <p>Contamos con una extensa red de consultorios en todo el país...</p>
-        <a href="http://enlace-a-los-consultorios.com" target="_blank" class="btn-consulting">Ver Consultorios</a>
-    </section>
-
-    <!-- Insumos Médicos -->
-    <section class="medical-supplies-section">
-        <h2>Insumos Médicos</h2>
-        <ul>
-            <li>Medicamentos obstétricos</li>
-            <li>Equipos de monitoreo fetal</li>
-            <li>Material quirúrgico estéril</li>
-            <li>Medicamentos para el control de la presión arterial</li>
-            <li>Suplementos nutricionales para la madre y el bebé</li>
-        </ul>
-    </section>
-
-    <!-- Emprendimientos y Labor Social -->
-    <section class="social-work-section">
-        <h2>Emprendimientos y Labor Social</h2>
-        <div class="pyramid">
-            <ul>
-                <li>Desarrollo de proyectos comunitarios</li>
-                <li>Educación y capacitaciones en salud reproductiva</li>
-                <li>Asistencia social a comunidades rurales</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Sección de Cursos -->
-    <section class="courses-section">
-        <h2>Nuestros Cursos</h2>
-        <div class="course-card">
-            <p class="course-title">Curso de Atención Obstétrica</p>
-            <p>Aprende sobre técnicas avanzadas en atención obstétrica.</p>
-            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
-        </div>
-
-        <div class="course-card">
-            <p class="course-title">Próximos Cursos</p>
-            <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
-            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
-             <!-- Botón de PayPhone -->
-            <a href="https://payp.page.link/yna4m" target="_blank" class="course-btn" style="background-color: #ff6600;">
-                Pagar con PayPhone
-            </a>
-        </div>
-
-        <!-- Sección de Plataforma -->
-        <div class="platform-section">
-            <h3>Accede a nuestra plataforma</h3>
-            <p>Amplía tus conocimientos con nuestros cursos especializados.</p>
-            <a href="https://plataforma-curso.com" target="_blank" class="platform-btn">Ingresar</a>
-        </div>
-    </section>
-    
-    <!-- Contacto -->
-    <section class="contact-info-section">
-        <h2>Contacto</h2>
-        <p>Correo: contacto@aso.com</p>
-        <p>Teléfono: +593 99 999 999</p>
-    </section>
-    
-    <!-- Pie de Página con los Derechos de Autor -->
-    <footer>
-        <p>&copy; 2025 Red de Consultorios ASO. Todos los derechos reservados.</p>
-    </footer>
+    <!-- Sección de Plataforma -->
+    <div class="platform-section">
+        <h3>Accede a nuestra plataforma</h3>
+        <p>Amplía tus conocimientos con nuestros cursos especializados.</p>
+        <a href="https://plataforma-curso.com" target="_blank" class="platform-btn">Ingresar</a>
+    </div>
 
     <!-- Botón de WhatsApp -->
     <a href="https://wa.me/593984235123?text=Hola%20ASO,%20estoy%20interesado%20en%20los%20cursos" class="contact-btn">
         <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
         Contactar vía WhatsApp
+    </a>
+
+    <!-- Carrito de Compras -->
+    <a href="#" class="cart-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Shopping_cart_icon.svg" alt="Carrito">
+        Ver Carrito
     </a>
 
     <script>
