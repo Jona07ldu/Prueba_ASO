@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito de Compras - ASO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    h1 {
+      color: #6a4c9c;
+      text-align: center;
+    }
+
+    .cart-container {
+      max-width: 600px;
+      margin: auto;
+      background-color: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    .cart-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+
+    .cart-item:last-child {
+      border-bottom: none;
+    }
+
+    .cart-item button {
+      background-color: #ff6600;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+
+    .total {
+      font-weight: bold;
+      font-size: 20px;
+      text-align: right;
+      margin-top: 20px;
+    }
+
+    .pay-btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #00a1e5;
+      color: white;
+      padding: 15px;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+      text-decoration: none;
+    }
+
+    .pay-btn:hover {
+      background-color: #0077aa;
+    }
+  </style>
+</head>
+<body>
+  <h1>Tu Carrito de Cursos</h1>
+  <div class="cart-container" id="cart-container">
+    <div id="cart-items"></div>
+    <div class="total" id="total">Total: $0</div>
+
+    <!-- Botón PayPhone (simulado) -->
+    <a class="pay-btn" href="https://pay.payphonetodoesposible.com/" target="_blank">
+      Pagar con PayPhone
+    </a>
+  </div>
+
+  <script>
+    let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+    const cartItemsContainer = document.getElementById("cart-items");
+    const totalElement = document.getElementById("total");
+
+    let total = 0;
+
+    carrito.forEach((item, index) => {
+      const itemDiv = document.createElement("div");
+      itemDiv.classList.add("cart-item");
+      itemDiv.innerHTML = `
+        <span>${item.nombre}</span>
+        <span>$${item.precio}</span>
+        <button onclick="eliminarItem(${index})">Eliminar</button>
+      `;
+      cartItemsContainer.appendChild(itemDiv);
+      total += item.precio;
+    });
+
+    totalElement.textContent = "Total: $" + total;
+
+    function eliminarItem(index) {
+      carrito.splice(index, 1);
+      localStorage.setItem("carrito", JSON.stringify(carrito));
+      location.reload(); // recarga para actualizar vista
+    }
+  </script>
+</body>
+</html>
