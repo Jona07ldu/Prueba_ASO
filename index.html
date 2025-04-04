@@ -343,7 +343,7 @@
         #chatbotForm button:hover {
             background-color: #128c7e;
         }
-
+        
     </style>
 </head>
 <body>
@@ -442,26 +442,21 @@
     </section>
 
     <!-- Botón de WhatsApp -->
-    <!-- Botón de WhatsApp (parte inferior derecha) -->
-    <a href="javascript:void(0);" onclick="toggleChatbot()" id="whatsappButton" 
-   style="position: fixed; bottom: 20px; right: 20px; z-index: 999; display: block;">
-  <img src="https://img.icons8.com/color/96/000000/whatsapp--v1.png" alt="WhatsApp" style="width: 60px; height: 60px;">
-</a>
+    <a href="https://wa.me/1234567890" class="contact-btn">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/60/WhatsApp.svg" alt="WhatsApp"> Contactar por WhatsApp
+    </a>
     
-    <!-- Formulario Chatbot -->
-<div id="chatbotForm" style="display: none; position: fixed; bottom: 100px; right: 30px; background-color: white; padding: 20px; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.15); z-index: 1000;">
-    <h3 style="margin-top: 0;">¿Qué curso te interesa?</h3>
-    <form onsubmit="sendToWhatsApp(); return false;">
-        <select id="courseSelect" required style="width: 100%; margin-bottom: 10px;">
-            <option value="">Selecciona un curso</option>
-            <option value="Curso 1: Introducción a la Obstetricia">Curso 1: Introducción a la Obstetricia</option>
-            <option value="Curso 2: Técnicas Avanzadas de Obstetricia">Curso 2: Técnicas Avanzadas de Obstetricia</option>
-            <option value="Curso 3: Gestión de Consultorios Obstétricos">Curso 3: Gestión de Consultorios Obstétricos</option>
+    <!-- Formulario de Chatbot -->
+    <div id="chatbotForm">
+        <h3>Hola, ¿En qué puedo ayudarte?</h3>
+        <input type="text" placeholder="Escribe tu mensaje...">
+        <select>
+            <option value="">Selecciona el curso...</option>
+            <option value="curso1">Curso 1</option>
+            <option value="curso2">Curso 2</option>
         </select>
-        <input type="text" id="userName" placeholder="Tu nombre" required style="width: 100%; margin-bottom: 10px;">
-        <button type="submit" style="width: 100%; background-color: #6a4c9c; color: white; padding: 10px; border: none; border-radius: 5px;">Enviar</button>
-    </form>
-</div>
+        <button>Enviar</button>
+    </div>
 
      <script>
         // Animar las secciones al hacer scroll
@@ -500,29 +495,18 @@
             });
         });
 
-        // Mostrar el formulario del chatbot
        <script>
-    function toggleChatbot() {
-        var form = document.getElementById("chatbotForm");
-        if (form.style.display === "none" || form.style.display === "") {
-            form.style.display = "block";
-        } else {
-            form.style.display = "none";
-        }
-    }
+    // Función para generar el mensaje de WhatsApp y redirigir
+    function sendMessage() {
+        var userMessage = document.getElementById("userMessage").value;
+        var selectedCourse = document.getElementById("courseSelect").value;
+        var message = "Hola, estoy interesado en el curso: " + selectedCourse + ".\n" + "Mensaje adicional: " + userMessage;
 
-    function sendToWhatsApp() {
-        var nombre = document.getElementById("userName").value;
-        var curso = document.getElementById("courseSelect").value;
+        // Crear enlace de WhatsApp con el mensaje
+        var whatsappLink = "https://wa.me/1234567890?text=" + encodeURIComponent(message);
 
-        if (nombre && curso) {
-            var mensaje = "Hola, soy " + nombre + ". Estoy interesado en el " + curso;
-            var numero = "593999999999"; // Reemplaza con el número de WhatsApp real sin el "+" inicial
-            var url = "https://wa.me/" + numero + "?text=" + encodeURIComponent(mensaje);
-            window.open(url, '_blank');
-        } else {
-            alert("Por favor completa todos los campos.");
-        }
+        // Redirigir a WhatsApp
+        window.location.href = whatsappLink;
     }
 </script>
 
