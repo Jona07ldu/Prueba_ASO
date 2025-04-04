@@ -442,46 +442,45 @@
     </section>
 
     <!-- Botón de WhatsApp -->
-<a href="javascript:void(0);" class="contact-btn" onclick="sendMessage()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"> Contactar por WhatsApp
+<a href="javascript:void(0);" class="contact-btn" onclick="mostrarChatbot()">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" style="width: 24px; vertical-align: middle;"> Contactar por WhatsApp
 </a>
 
 <!-- Formulario de Chatbot -->
-<div id="chatbotForm">
+<div id="chatbotForm" style="display: none; margin-top: 10px;">
     <h3>Hola, ¿En qué puedo ayudarte?</h3>
-    <input type="text" placeholder="Escribe tu mensaje..." id="userMessage">
-    <select id="courseSelect">
+    <input type="text" id="userMessage" placeholder="Escribe tu mensaje..." style="display:block; margin:5px 0;">
+    <select id="courseSelect" style="display:block; margin:5px 0;">
         <option value="">Selecciona el curso...</option>
-        <option value="curso1">Curso 1</option>
-        <option value="curso2">Curso 2</option>
+        <option value="Curso 1">Curso 1</option>
+        <option value="Curso 2">Curso 2</option>
     </select>
     <button type="button" onclick="sendMessage()">Enviar</button>
 </div>
 
     <script>
-    // Función para generar el mensaje de WhatsApp y redirigir
+    function mostrarChatbot() {
+        const form = document.getElementById("chatbotForm");
+        form.style.display = form.style.display === "none" ? "block" : "none";
+    }
+
     function sendMessage() {
-        // Obtener el mensaje y el curso seleccionado
-        var userMessage = document.getElementById("userMessage").value;
+        var userMessage = document.getElementById("userMessage").value.trim();
         var selectedCourse = document.getElementById("courseSelect").value;
 
-        // Verificar que el mensaje y el curso hayan sido llenados
-        if (userMessage === "" || selectedCourse === "") {
-            alert("Por favor, ingresa un mensaje y selecciona un curso.");
-            return; // No proceder si faltan campos
+        if (!userMessage || !selectedCourse) {
+            alert("Por favor, escribe un mensaje y selecciona un curso.");
+            return;
         }
 
-        // Crear el mensaje que se enviará por WhatsApp
-        var message = "Hola, estoy interesado en el curso: " + selectedCourse + ".\n" + "Mensaje adicional: " + userMessage;
+        var message = "Hola, estoy interesado en el curso: " + selectedCourse + ".\nMensaje adicional: " + userMessage;
+        var whatsappLink = "https://wa.me/593984235123?text=" + encodeURIComponent(message);
 
-        // Crear enlace de WhatsApp con el mensaje
-        var whatsappLink = "https://wa.me/1234567890?text=" + encodeURIComponent(message);
-
-        // Redirigir a WhatsApp
+        // Redirige a WhatsApp
         window.location.href = whatsappLink;
     }
 </script>
-
+    
 <!-- Carrito de Compras -->
 <!-- Botón fijo de añadir al carrito -->
 <a href="carrito.html" class="cart-btn">
