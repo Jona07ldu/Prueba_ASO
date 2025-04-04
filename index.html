@@ -39,54 +39,7 @@
             left: 20px;
         }
 
-        /* Barra de navegación para el carrito */
-        .nav-bar {
-            display: flex;
-            justify-content: flex-end;
-            background-color: #6a4c9c;
-            padding: 10px;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-bar a {
-            color: white;
-            text-decoration: none;
-            font-size: 18px;
-            padding: 10px 20px;
-            transition: background 0.3s ease;
-        }
-
-        .nav-bar a:hover {
-            background-color: #4f3b7e;
-        }
-
-        .top-menu {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-        }
-
-        .top-menu a {
-            background-color: #ffffff;
-            color: #6a4c9c;
-            padding: 10px 20px;
-            font-size: 16px;
-            text-decoration: none;
-            border-radius: 20px;
-            font-weight: bold;
-            border: 2px solid #6a4c9c;
-            transition: all 0.3s ease;
-        }
-
-        .top-menu a:hover {
-            background-color: #6a4c9c;
-            color: white;
-        }
-
-        /* Sección Principal (Hero) */
+       /* Sección Principal (Hero) */
         .hero {
             background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
             background-size: cover;
@@ -262,7 +215,7 @@
             margin-right: 10px;
             vertical-align: middle;
         }
-
+        
         /* Sección de Plataforma */
         .platform-section {
             margin-top: 30px;
@@ -330,61 +283,104 @@
                 font-size: 18px;
             }
         }
+
     </style>
 </head>
 <body>
 
-    <!-- Barra de Navegación (Carrito) -->
-    <div class="nav-bar">
-        <a href="#cursos">Cursos</a>
-        <a href="#contacto">Contacto</a>
-        <a href="#cart">Carrito</a> <!-- Agregado el enlace del carrito -->
-    </div>
-
     <!-- Header -->
     <header>
-        <img src="https://via.placeholder.com/150" alt="Logo de ASO" class="logo">
+        <img src="https://i.postimg.cc/zGkTZzB8/logo-png.jpg" alt="Logo ASO" class="logo">
         <h1>Bienvenidos a la red de Consultorios ASO</h1>
     </header>
 
-    <!-- Hero -->
-    <section class="hero visible">
-        <h2>Servicios Obstétricos Profesionales</h2>
-        <p>Te acompañamos en cada etapa del embarazo con la mejor atención médica.</p>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h2>Consultorios de Obstetricia</h2>
+        <p>Servicio Profesional en Todo Ecuador</p>
     </section>
 
-    <!-- Sección de Historia -->
+    <!-- Historia de la Asociación -->
     <section class="history-section">
-        <h2>Historia</h2>
-        <p>Con más de 10 años de experiencia en el cuidado de la salud materno-infantil...</p>
+        <h2>Historia de la Asociación</h2>
+        <p>La Red de Consultorios ASO comenzó como una iniciativa para mejorar la atención obstétrica en Ecuador...</p>
     </section>
 
-    <!-- Sección Acerca de Nosotros -->
+    <!-- Quiénes Somos -->
     <section class="about-us-section">
-        <h2>¿Quiénes somos?</h2>
-        <p>Somos una red de consultorios especializados en obstetricia...</p>
+        <h2>Quiénes Somos</h2>
+        <p>Somos una red de profesionales dedicados a brindar atención integral a mujeres durante el embarazo...</p>
     </section>
 
-    <!-- Sección Red de Consultorios -->
+    <!-- Red de Consultorios -->
     <section class="consulting-network-section">
-        <h2>Nuestra Red de Consultorios</h2>
-        <p>Contamos con una amplia red de profesionales a nivel nacional...</p>
+        <h2>Red de Consultorios</h2>
+        <p>Contamos con una extensa red de consultorios en todo el país...</p>
+        <a href="http://enlace-a-los-consultorios.com" target="_blank" class="btn-consulting">Ver Consultorios</a>
+    </section>
+
+    <!-- Insumos Médicos -->
+    <section class="medical-supplies-section">
+        <h2>Insumos Médicos</h2>
+        <ul>
+            <li>Medicamentos obstétricos</li>
+            <li>Equipos de monitoreo fetal</li>
+            <li>Material quirúrgico estéril</li>
+            <li>Medicamentos para el control de la presión arterial</li>
+            <li>Suplementos nutricionales para la madre y el bebé</li>
+        </ul>
+    </section>
+
+    <!-- Emprendimientos y Labor Social -->
+    <section class="social-work-section">
+        <h2>Emprendimientos y Labor Social</h2>
+        <div class="pyramid">
+            <ul>
+                <li>Desarrollo de proyectos comunitarios</li>
+                <li>Educación y capacitaciones en salud reproductiva</li>
+                <li>Asistencia social a comunidades rurales</li>
+            </ul>
+        </div>
     </section>
 
     <!-- Sección de Cursos -->
-    <section id="cursos" class="courses-section">
-        <h2>Cursos Disponibles</h2>
+    <section class="courses-section">
+        <h2>Nuestros Cursos</h2>
         <div class="course-card">
-            <div class="course-title">Curso 1</div>
-            <p>Descripción del curso 1...</p>
-            <a href="#" class="course-btn">Añadir al carrito</a>
+            <p class="course-title">Curso de Atención Obstétrica</p>
+            <p>Aprende sobre técnicas avanzadas en atención obstétrica.</p>
+            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
         </div>
+
         <div class="course-card">
-            <div class="course-title">Curso 2</div>
-            <p>Descripción del curso 2...</p>
-            <a href="#" class="course-btn">Añadir al carrito</a>
+            <p class="course-title">Próximos Cursos</p>
+            <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
+            <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
+             <!-- Botón de PayPhone -->
+            <a href="https://payp.page.link/yna4m" target="_blank" class="course-btn" style="background-color: #ff6600;">
+                Pagar con PayPhone
+            </a>
+        </div>
+
+        <!-- Sección de Plataforma -->
+        <div class="platform-section">
+            <h3>Accede a nuestra plataforma</h3>
+            <p>Amplía tus conocimientos con nuestros cursos especializados.</p>
+            <a href="https://plataforma-curso.com" target="_blank" class="platform-btn">Ingresar</a>
         </div>
     </section>
+    
+    <!-- Contacto -->
+    <section class="contact-info-section">
+        <h2>Contacto</h2>
+        <p>Correo: contacto@aso.com</p>
+        <p>Teléfono: +593 99 999 999</p>
+    </section>
+    
+    <!-- Pie de Página con los Derechos de Autor -->
+    <footer>
+        <p>&copy; 2025 Red de Consultorios ASO. Todos los derechos reservados.</p>
+    </footer>
 
     <!-- Botón de WhatsApp -->
     <a href="https://wa.me/593984235123?text=Hola%20ASO,%20estoy%20interesado%20en%20los%20cursos" class="contact-btn">
@@ -414,30 +410,6 @@
 
         // Llamar a la función del chatbot al cargar la página
         window.onload = openWhatsAppChat;
-    </script>
-
-    <script>
-        // Aquí puedes agregar el carrito dinámico si lo deseas
-        let cart = [];
-
-        function addToCart(courseTitle) {
-            cart.push(courseTitle);
-            displayCart();
-        }
-
-        function displayCart() {
-            const cartItems = document.getElementById('cart-items');
-            cartItems.innerHTML = '';
-            cart.forEach(item => {
-                const itemElement = document.createElement('div');
-                itemElement.textContent = item;
-                cartItems.appendChild(itemElement);
-            });
-        }
-
-        // Llamar a la función de añadir productos al carrito
-        addToCart('Curso de Atención Obstétrica');
-        addToCart('Próximos Cursos');
     </script>
 
 </body>
