@@ -39,7 +39,32 @@
             left: 20px;
         }
 
-       /* Sección Principal (Hero) */
+        /* Barra de navegación para el carrito */
+        .nav-bar {
+            display: flex;
+            justify-content: flex-end;
+            background-color: #6a4c9c;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background-color: #4f3b7e;
+        }
+
+        /* Resto de las secciones */
+         /* Sección Principal (Hero) */
         .hero {
             background-image: url('https://i.postimg.cc/SKNCmB28/obstetra-fondo-jpg.jpg');
             background-size: cover;
@@ -283,10 +308,15 @@
                 font-size: 18px;
             }
         }
-
+        /* Puedes copiar el código que me diste aquí */
     </style>
 </head>
 <body>
+
+    <!-- Barra de Navegación (Carrito) -->
+    <div class="nav-bar">
+        <a href="#cart">Carrito</a>
+    </div>
 
     <!-- Header -->
     <header>
@@ -299,7 +329,8 @@
         <h2>Consultorios de Obstetricia</h2>
         <p>Servicio Profesional en Todo Ecuador</p>
     </section>
-
+    
+    <!-- Tu código original sigue aquí sin cambios -->
     <!-- Historia de la Asociación -->
     <section class="history-section">
         <h2>Historia de la Asociación</h2>
@@ -344,7 +375,7 @@
     </section>
 
     <!-- Sección de Cursos -->
-    <section class="courses-section">
+    <section class="courses-section" id="cart">
         <h2>Nuestros Cursos</h2>
         <div class="course-card">
             <p class="course-title">Curso de Atención Obstétrica</p>
@@ -356,18 +387,27 @@
             <p class="course-title">Próximos Cursos</p>
             <p>Conoce nuestros próximos cursos sobre salud materna y cuidados neonatales.</p>
             <a href="https://facebook.com/tu-pagina" target="_blank" class="course-btn">Ver en Facebook</a>
-             <!-- Botón de PayPhone -->
+            <!-- Botón de PayPhone -->
             <a href="https://payp.page.link/yna4m" target="_blank" class="course-btn" style="background-color: #ff6600;">
                 Pagar con PayPhone
             </a>
         </div>
 
-        <!-- Sección de Plataforma -->
+        <!-- Aquí colocamos el carrito de compras -->
+        <div class="cart-section">
+            <h2>Carrito de Compras</h2>
+            <p>Aquí aparecerán los productos seleccionados.</p>
+            <div id="cart-items">
+                <!-- Aquí se llenarán los productos del carrito dinámicamente -->
+            </div>
+            <button id="checkout-btn" class="course-btn">Ir a Pagar</button>
+        </div>
+         <!-- Sección de Plataforma -->
         <div class="platform-section">
             <h3>Accede a nuestra plataforma</h3>
             <p>Amplía tus conocimientos con nuestros cursos especializados.</p>
             <a href="https://plataforma-curso.com" target="_blank" class="platform-btn">Ingresar</a>
-        </div>
+        </div>  
     </section>
     
     <!-- Contacto -->
@@ -376,8 +416,8 @@
         <p>Correo: contacto@aso.com</p>
         <p>Teléfono: +593 99 999 999</p>
     </section>
-    
-    <!-- Pie de Página con los Derechos de Autor -->
+
+    <!-- Pie de Página -->
     <footer>
         <p>&copy; 2025 Red de Consultorios ASO. Todos los derechos reservados.</p>
     </footer>
@@ -410,6 +450,30 @@
 
         // Llamar a la función del chatbot al cargar la página
         window.onload = openWhatsAppChat;
+    </script>
+
+    <script>
+        // Aquí puedes agregar el carrito dinámico si lo deseas
+        let cart = [];
+
+        function addToCart(courseTitle) {
+            cart.push(courseTitle);
+            displayCart();
+        }
+
+        function displayCart() {
+            const cartItems = document.getElementById('cart-items');
+            cartItems.innerHTML = '';
+            cart.forEach(item => {
+                const itemElement = document.createElement('div');
+                itemElement.textContent = item;
+                cartItems.appendChild(itemElement);
+            });
+        }
+
+        // Llamar a la función de añadir productos al carrito
+        addToCart('Curso de Atención Obstétrica');
+        addToCart('Próximos Cursos');
     </script>
 
 </body>
